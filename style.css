@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General styling and utility classes */
+html {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    /* font-family: 'Poppins', sans-serif; */
+} 
+
+:root {
+    --very-pale-cyan: hsl(193, 100%, 96%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+    --pink: hsl(322, 100%, 66%);
+
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Container styling */
+.container {
+    width: 375px;
+}
+
+/* Nav Styling */
+.container > .nav-bar {
+    background: url(./images/bg-hero-mobile.svg) no-repeat 
+    center center/cover;
+    background-color: var(--very-pale-cyan);
+    padding: 20px 0;
+}
+/* Nav top */
+.container > .nav-bar .nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 13px;
+
+}
+.container > .nav-bar .nav-top > figure.huddle {
+      width: 100px;
+      height: 30px;
+}
+.container > .nav-bar .nav-top > figure.huddle >
+img {
+    object-fit: contain;
+}
+.container > .nav-bar .nav-top > div:first-of-type {
+    background-color: white;
+    padding: 4px 24px;
+    border-radius: 29px;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+}
+/* Nav text and picture */
+.container > .nav-bar > .nav-text-pictures {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    /* background-color: yellow; */
+}
+/* Nav Text */
+.container > .nav-bar > .nav-text-pictures > .build-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.container > .nav-bar > .nav-text-pictures > .build-text >
+.build-text-bold {
+    display: flex ;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+.container > .nav-bar > .nav-text-pictures > .build-text >
+p {
+    text-align: center;
+    padding: 0 15px;
+    /* background-color: yellow; */
+    line-height: 1.5;
+}
+.container > .nav-bar > .nav-text-pictures > .build-text >
+.get-started {
+    background-color: var(--pink);
+    color: white;
+    padding: 12px 70px;
+    border-radius: 80px;
+    margin-top: 30px;
+    font-size: 0.7rem;
+}
+.container > .nav-bar > .nav-text-pictures > .nav-big-image {
+    margin: 0 30px;
+    margin-top: 40px;
+}
+
+/* - Pink: hsl(322, 100%, 66%)
+
+### Neutral
+
+- Very Pale Cyan: hsl(193, 100%, 96%)
+- Very Dark Cyan: hsl(192, 100%, 9%)
+- Grayish Blue: hsl(208, 11%, 55%) */
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
