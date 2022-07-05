@@ -27,9 +27,26 @@ img {
     height: 100%;
     width: 100%;
 }
+.get-started {
+    background-color: var(--pink);
+    color: white;
+    /* padding: 12px 70px; */
+    border-radius: 80px;
+    margin-top: 30px;
+    font-size: 0.7rem;
+    box-shadow: 0 0 2px 2px  rgba(0, 0, 0, 0.1);
+}
+.bold-text {
+    font-family: 'poppins', sans-serif;
+    font-size: 1.3rem;
+    /* margin: 20px 0; */
+    /* margin-top: 50px; */
+    color: black;
+}
 
 /* Container styling */
 .container {
+    position: relative;
     width: 375px;
 }
 
@@ -39,6 +56,7 @@ img {
     center center/cover;
     background-color: var(--very-pale-cyan);
     padding: 20px 0;
+    padding-bottom: 35px;
 }
 /* Nav top */
 .container > .nav-bar .nav-top {
@@ -111,13 +129,114 @@ p {
     margin-top: 40px;
 }
 
-/* - Pink: hsl(322, 100%, 66%)
 
-### Neutral
+/* Main Content Styling */
+  
+.container > .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    padding-bottom: 250px;
+}
+.container > .main-content > .grow-together {
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  box-shadow: 0 0 2px 2px  rgba(0, 0, 0, 0.1);
+  padding: 20px 0px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+.container > .main-content > .grow-together >
+figure.grow-together-img {
+   margin: 0 40px;
+   margin-top: 50px;
+}
+.container > .main-content > .grow-together >
+figure.grow-together-img > img {
+   object-fit: contain;
+}
+/* Grow together text */
+.container > .main-content > .grow-together >
+.grow-together-text {
+    text-align: center;
+    padding: 0 13px;
+    color: darkgray;
+}
+.container > .main-content > .grow-together >
+.grow-together-text > .bold-text {
+    font-family: 'poppins', sans-serif;
+    font-size: 1.3rem;
+    margin: 20px 0;
+    margin-top: 50px;
+    color: black;
+}
 
-- Very Pale Cyan: hsl(193, 100%, 96%)
-- Very Dark Cyan: hsl(192, 100%, 9%)
-- Grayish Blue: hsl(208, 11%, 55%) */
+
+.container > .ready-to-build {
+    width: 94%;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 0 2px 2px  rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 500px;
+    z-index: 5;
+}
+.container > .ready-to-build > .bold-text {
+    font-size: 1rem;
+}
+.container > .ready-to-build > .get-started {
+    padding: 20px 30px;
+    width: 70%;
+    margin: auto; 
+    margin-top: 20px;
+}
+
+/* Footer Styling */
+.container > .bottom-page {
+    background-color: var(--very-dark-cyan);
+    padding: 0 15px;
+    padding-top: 200px;
+    color: darkgray;
+}
+.container > .bottom-page > * {
+    display: flex;
+}
+/* Location styling */
+.container > .bottom-page > .location {
+   margin: 25px 0;
+}
+.container > .bottom-page > .location > 
+.location-icon {
+   width: 50px;
+   height: 40px;
+   margin-right: 15px;
+   padding-bottom: 6px;
+}
+.container > .bottom-page > .location > 
+.location-icon > img {
+    object-fit: contain;
+}
+/* Phone styling */
+.container > .bottom-page > .phone {
+    margin-bottom: 20px;
+}
+.container > .bottom-page > .phone > 
+.phone-icon {
+    width: 20px;
+    height: 25px;
+    margin-right: 12px;
+}
+.container > .bottom-page > .phone > 
+.phone-icon > img {
+    object-fit: contain;
+}
+
+
+
 
 
 .attribution { font-size: 11px; text-align: center; }
