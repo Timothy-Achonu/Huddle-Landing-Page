@@ -34,7 +34,7 @@ img {
     border-radius: 80px;
     margin-top: 30px;
     font-size: 0.7rem;
-    box-shadow: 0 0 2px 2px  rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px 2px  rgba(0, 0, 0, 0.4);
 }
 .bold-text {
     font-family: 'poppins', sans-serif;
@@ -166,7 +166,7 @@ figure.grow-together-img > img {
 }
 .container > .main-content > .grow-together >
 .grow-together-text > .bold-text {
-    font-family: 'poppins', sans-serif;
+    font-family: 'poppins';
     font-size: 1.3rem;
     margin: 20px 0;
     margin-top: 50px;
@@ -176,20 +176,27 @@ figure.grow-together-img > img {
 
 .container > .ready-to-build {
     width: 94%;
-    margin: auto;
-    padding: 40px 20px;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 60px 20px;
+    padding-bottom: 40px;
     text-align: center;
     box-shadow: 0 0 2px 2px  rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     position: absolute;
-    bottom: 500px;
-    z-index: 5;
+    bottom: 0;
+    top: 2650px;
+    left: 0;
+    right: 0;
+
+    background-color: white;
+    z-index: 1;
 }
 .container > .ready-to-build > .bold-text {
     font-size: 1rem;
 }
 .container > .ready-to-build > .get-started {
-    padding: 20px 30px;
+    padding: 15px 30px;
     width: 70%;
     margin: auto; 
     margin-top: 20px;
@@ -199,15 +206,24 @@ figure.grow-together-img > img {
 .container > .bottom-page {
     background-color: var(--very-dark-cyan);
     padding: 0 15px;
-    padding-top: 200px;
+    padding-top: 150px;
     color: darkgray;
 }
 .container > .bottom-page > * {
     display: flex;
 }
+/* our logo styling footer */
+.container > .bottom-page > .footer-huddle {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2.4rem;
+    color: white;
+    font-family: 'poppins';
+}
 /* Location styling */
 .container > .bottom-page > .location {
    margin: 25px 0;
+   margin-top: 10px;
 }
 .container > .bottom-page > .location > 
 .location-icon {
@@ -215,6 +231,9 @@ figure.grow-together-img > img {
    height: 40px;
    margin-right: 15px;
    padding-bottom: 6px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .container > .bottom-page > .location > 
 .location-icon > img {
@@ -222,21 +241,73 @@ figure.grow-together-img > img {
 }
 /* Phone styling */
 .container > .bottom-page > .phone {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 .container > .bottom-page > .phone > 
 .phone-icon {
     width: 20px;
     height: 25px;
     margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container > .bottom-page > .phone > 
 .phone-icon > img {
     object-fit: contain;
 }
+.container > .bottom-page > .email {
+    margin-bottom: 60px;
+}
+.container > .bottom-page > .email > 
+.email-icon {
+    width: 20px;
+    height: 25px;
+    margin-right: 12px;
+    /* background-color: red; */
+}
+.container > .bottom-page > .email > 
+.email-icon > img {
+    object-fit: contain;
+    margin-top: 2px;
+ }
+ .container > .bottom-page > .about-us {
+     flex-direction: column;
+     height: 210px;
+     justify-content: space-between;
+     /* color: whitesmoke; */
+ }
+ /* Socials styling */
+ .container > .bottom-page > .socials {
+     flex-direction: column;
+     margin-top: 40px;
+ }
+ .container > .bottom-page > .socials > .social-icons {
+     display: flex;
+     justify-content: space-between;
+     width: 120px;
+     margin: auto;
+ }
+ .container > .bottom-page > .socials > .social-icons > 
+ figure{
+   width: 32px;
+   height: 32px;
+   border: white 1px solid;
+   border-radius: 50%;
+   padding: 4px;
+ }
+ .container > .bottom-page > .socials > .social-icons > 
+ figure > img {
+     object-fit: contain;
+ }
+ .container > .bottom-page > .socials > .copyright {
+    font-size: 00.7rem;
+    text-align: center;
+    margin: 30px 0;
+    margin-bottom: 69px;
+ }
 
-
-
+ /* Don't forget you still have to style Desktop. */
 
 
 .attribution { font-size: 11px; text-align: center; }
