@@ -35,6 +35,7 @@ img {
     margin-top: 30px;
     font-size: 0.7rem;
     box-shadow: 0 0 2px 2px  rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 .bold-text {
     font-family: 'poppins', sans-serif;
@@ -81,6 +82,7 @@ img {
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
     font-size: 0.7rem;
+    cursor: pointer;
 }
 /* Nav text and picture */
 .container > .nav-bar > .nav-text-pictures {
@@ -89,6 +91,7 @@ img {
     margin-top: 100px;
     width: 100%;
     text-align: center;
+    /* height: 900px; */
     /* background-color: yellow; */
 }
 /* Nav Text */
@@ -125,14 +128,16 @@ p {
     font-size: 0.7rem;
 }
 .container > .nav-bar > .nav-text-pictures > .nav-big-image {
-    margin: 0 30px;
+    margin: 0 auto;
     margin-top: 40px;
+    width: 90%;
 }
 
 
 /* Main Content Styling */
   
 .container > .main-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,9 +177,11 @@ figure.grow-together-img > img {
     margin-top: 50px;
     color: black;
 }
-
-
-.container > .ready-to-build {
+/* Ready to build */
+.keep-position {
+    position: relative;
+}
+.container > .keep-position > .ready-to-build {
     width: 94%;
     height: fit-content;
     margin: 0 auto;
@@ -184,11 +191,10 @@ figure.grow-together-img > img {
     box-shadow: 0 0 2px 2px  rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     position: absolute;
-    bottom: 0;
-    top: 2650px;
+    top: -110px;
+    bottom: 0px;
     left: 0;
     right: 0;
-
     background-color: white;
     z-index: 1;
 }
@@ -212,8 +218,11 @@ figure.grow-together-img > img {
 .container > .bottom-page > * {
     display: flex;
 }
+.container > .bottom-page > .footer-left{
+  flex-direction: column;
+}
 /* our logo styling footer */
-.container > .bottom-page > .footer-huddle {
+.container > .bottom-page > .footer-left > .footer-huddle {
     display: flex;
     justify-content: flex-start;
     font-size: 2.4rem;
@@ -221,11 +230,12 @@ figure.grow-together-img > img {
     font-family: 'poppins';
 }
 /* Location styling */
-.container > .bottom-page > .location {
+.container > .bottom-page > .footer-left > .location {
+    display: flex;
    margin: 25px 0;
    margin-top: 10px;
 }
-.container > .bottom-page > .location > 
+.container > .bottom-page > .footer-left > .location > 
 .location-icon {
    width: 50px;
    height: 40px;
@@ -235,15 +245,16 @@ figure.grow-together-img > img {
    justify-content: center;
    align-items: center;
 }
-.container > .bottom-page > .location > 
+.container > .bottom-page > .footer-left > .location > 
 .location-icon > img {
     object-fit: contain;
 }
 /* Phone styling */
-.container > .bottom-page > .phone {
+.container > .bottom-page > .footer-left > .phone {
+    display: flex;
     margin-bottom: 25px;
 }
-.container > .bottom-page > .phone > 
+.container > .bottom-page > .footer-left > .phone > 
 .phone-icon {
     width: 20px;
     height: 25px;
@@ -252,41 +263,48 @@ figure.grow-together-img > img {
     justify-content: center;
     align-items: center;
 }
-.container > .bottom-page > .phone > 
+.container > .bottom-page > .footer-left > .phone > 
 .phone-icon > img {
     object-fit: contain;
 }
-.container > .bottom-page > .email {
+.container > .bottom-page > .footer-left > .email {
+    display: flex;
     margin-bottom: 60px;
 }
-.container > .bottom-page > .email > 
+.container > .bottom-page > .footer-left > .email > 
 .email-icon {
     width: 20px;
     height: 25px;
     margin-right: 12px;
     /* background-color: red; */
 }
-.container > .bottom-page > .email > 
+.container > .bottom-page > .footer-left .email > 
 .email-icon > img {
     object-fit: contain;
     margin-top: 2px;
  }
  .container > .bottom-page > .about-us {
-     flex-direction: column;
-     height: 210px;
-     justify-content: space-between;
-     /* color: whitesmoke; */
+    flex-direction: column;
  }
+ .container > .bottom-page > .about-us  p {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    /* justify-content: space-between; */
+    /* color: whitesmoke; */
+ }
+ 
+
  /* Socials styling */
  .container > .bottom-page > .socials {
-     flex-direction: column;
-     margin-top: 40px;
+    flex-direction: column;
+    margin-top: 40px;
  }
  .container > .bottom-page > .socials > .social-icons {
-     display: flex;
-     justify-content: space-between;
-     width: 120px;
-     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    margin: auto;
  }
  .container > .bottom-page > .socials > .social-icons > 
  figure{
@@ -295,6 +313,11 @@ figure.grow-together-img > img {
    border: white 1px solid;
    border-radius: 50%;
    padding: 4px;
+ }
+ .container > .bottom-page > .socials > .social-icons > 
+ figure:hover {
+    color: var(--pink);
+    border: var(--pink) 1px solid;
  }
  .container > .bottom-page > .socials > .social-icons > 
  figure > img {
@@ -312,3 +335,136 @@ figure.grow-together-img > img {
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (min-width:900px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (min-width:1400px) {
+    .container {
+        width: 100%;
+    }
+    .container > .nav-bar .nav-top {
+        padding:0 70px;
+    }
+
+    /* Nav text and picture */
+    .container > .nav-bar > .nav-text-pictures {
+       justify-content: space-between;
+       /* background-color: yellow; */
+       padding: 0 70px;
+       /* height: 500px; */
+    }
+    /* Nav Text */
+    .container > .nav-bar > .nav-text-pictures > .build-text {
+        width: 40%;
+        /* background-color: green; */
+        padding: 0;
+        text-align: start;
+        align-items: start;
+        font-size: 1.3rem;
+    }
+    .container > .nav-bar > .nav-text-pictures > .build-text >
+    .build-text-bold {
+        font-size: 2.1rem;
+    }
+    .container > .nav-bar > .nav-text-pictures > .build-text
+    > p {
+        padding: 0;
+        text-align: start;
+     }
+    .container > .nav-bar > .nav-text-pictures > .build-text >
+    .get-started {
+        padding: 20px 80px;
+    }
+    .container > .nav-bar > .nav-text-pictures > 
+    .nav-big-image {
+        width: 50%;
+        /* height: 500px; */
+        /* background-color: rebeccapurple; */
+        margin: 0;
+    }
+    
+    /* Main content styling */
+    .container > .main-content {
+        padding: 0 60px;
+        margin-top: 100px;
+        padding-bottom: 250px;
+    }
+    .container > .main-content > .grow-together {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    .container > .main-content > .grow-together >
+    figure.grow-together-img {
+        width: 40%;
+        margin-bottom: 50px;
+    }
+    /* Grow together text */
+    .container > .main-content > .grow-together >
+    .grow-together-text {
+        flex-direction: column;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        width: 50%;
+        /* background-color: yellow; */
+        padding: 0 73px;
+        font-size: 1.2rem;
+        text-align: start;
+    }
+    /* Ready to build */
+   
+
+    .container > .keep-position >  .ready-to-build  {
+        width: 40%;
+        /* top: 3300px; */
+    }
+    /* Footer styling */
+    .container > .bottom-page {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 65px;
+        padding-top: 150px;
+        padding-bottom: 89px;
+
+    }
+    /* Footer-left */
+    .container > .bottom-page > .footer-left  {
+        width: 30%;
+    }
+
+    .container > .bottom-page > .about-us {
+        flex-direction: row;
+        width: 20%;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+    /* Socials styling */
+    .container > .bottom-page > .socials {
+        display: flex;
+        width: 20%;
+        /* background-color: gray; */
+        margin-top: 70px;
+        padding-top: 0;
+        justify-content: space-between;
+    }
+    .container > .bottom-page > .socials > .social-icons {
+        margin: 0;
+    }
+    .container > .bottom-page > .socials > .copyright {
+        margin-bottom: 30px;
+        text-align: start;
+    }
+
+}
+/* * {
+    outline: 1px solid limegreen !important;
+}  */
+
+/* * {
+    background: rgb(0 100 0 / 0.1) !important;
+
+} */
